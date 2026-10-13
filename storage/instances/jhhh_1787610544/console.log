@@ -1,0 +1,130 @@
+
+[2026-08-24 22:32:16] 🚀 Instance STARTED Successfully (python3)
+  File "/home/ubuntu/ne-host/storage/instances/jhhh_1787610544/main.py", line 5
+    BOT_TOKEN "8182502843:AAEYBYvnvDdkssD_QDTs8JQwnZWRxrjn04M"
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+
+[2026-08-24 22:33:03] 🚀 Instance STARTED Successfully (python3)
+Traceback (most recent call last):
+  File "/home/ubuntu/ne-host/storage/instances/jhhh_1787610544/main.py", line 1, in <module>
+    import telebot
+ModuleNotFoundError: No module named 'telebot'
+
+[2026-08-24 22:33:28] 🚀 Instance STARTED Successfully (python3)
+Traceback (most recent call last):
+  File "/home/ubuntu/ne-host/storage/instances/jhhh_1787610544/main.py", line 1, in <module>
+    import telebot
+ModuleNotFoundError: No module named 'telebot'
+
+[2026-08-24 22:40:57] 🧰 Preparing isolated Python environment...
+[2026-08-24 22:40:57] 📦 Installing requirements.txt before startup...
+Collecting pyTelegramBotAPI==4.22.0 (from -r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1))
+  Downloading pytelegrambotapi-4.22.0-py3-none-any.whl.metadata (48 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.1/48.1 kB 4.3 MB/s eta 0:00:00
+Collecting requests (from pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1))
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting charset_normalizer<4,>=2 (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1))
+  Downloading charset_normalizer-3.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (45 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.9/45.9 kB 15.8 MB/s eta 0:00:00
+Collecting idna<4,>=2.5 (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1))
+  Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+Collecting urllib3<3,>=1.26 (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1))
+  Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2023.5.7 (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1))
+  Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Downloading pytelegrambotapi-4.22.0-py3-none-any.whl (251 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 251.6/251.6 kB 17.6 MB/s eta 0:00:00
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 42.2 MB/s eta 0:00:00
+Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.0/137.0 kB 76.9 MB/s eta 0:00:00
+Downloading charset_normalizer-3.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (248 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 248.8/248.8 kB 74.0 MB/s eta 0:00:00
+Downloading idna-3.19-py3-none-any.whl (68 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.5/68.5 kB 44.1 MB/s eta 0:00:00
+Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.1/131.1 kB 69.9 MB/s eta 0:00:00
+Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests, pyTelegramBotAPI
+Successfully installed certifi-2026.7.22 charset_normalizer-3.5.1 idna-3.19 pyTelegramBotAPI-4.22.0 requests-2.34.2 urllib3-2.7.0
+[2026-08-24 22:40:57] ✅ Python requirements installed in isolated environment.
+
+[2026-08-24 22:40:57] 🚀 Instance STARTED Successfully (/home/ubuntu/ne-host/storage/instances/jhhh_1787610544/.venv/bin/python)
+
+[2026-08-24 22:56:59] 🛑 Instance STOPPED
+
+[2026-08-24 22:57:01] 🧰 Preparing isolated Python environment...
+[2026-08-24 22:57:01] 📦 Installing requirements.txt before startup...
+Requirement already satisfied: pyTelegramBotAPI==4.22.0 in ./.venv/lib/python3.12/site-packages (from -r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (4.22.0)
+Requirement already satisfied: requests in ./.venv/lib/python3.12/site-packages (from pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.34.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.5.1)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.19)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2026.7.22)
+[2026-08-24 22:57:01] ✅ Python requirements installed in isolated environment.
+
+[2026-08-24 22:57:01] 🚀 Instance STARTED Successfully (/home/ubuntu/ne-host/storage/instances/jhhh_1787610544/.venv/bin/python)
+
+[2026-08-24 22:57:04] 🧰 Preparing isolated Python environment...
+[2026-08-24 22:57:04] 📦 Installing requirements.txt before startup...
+Requirement already satisfied: pyTelegramBotAPI==4.22.0 in ./.venv/lib/python3.12/site-packages (from -r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (4.22.0)
+Requirement already satisfied: requests in ./.venv/lib/python3.12/site-packages (from pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.34.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.5.1)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.19)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2026.7.22)
+[2026-08-24 22:57:04] ✅ Python requirements installed in isolated environment.
+
+[2026-08-24 22:57:04] 🚀 Instance STARTED Successfully (/home/ubuntu/ne-host/storage/instances/jhhh_1787610544/.venv/bin/python)
+
+[2026-08-24 22:57:08] 🧰 Preparing isolated Python environment...
+[2026-08-24 22:57:08] 📦 Installing requirements.txt before startup...
+Requirement already satisfied: pyTelegramBotAPI==4.22.0 in ./.venv/lib/python3.12/site-packages (from -r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (4.22.0)
+Requirement already satisfied: requests in ./.venv/lib/python3.12/site-packages (from pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.34.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.5.1)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.19)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2026.7.22)
+[2026-08-24 22:57:08] ✅ Python requirements installed in isolated environment.
+
+[2026-08-24 22:57:08] 🚀 Instance STARTED Successfully (/home/ubuntu/ne-host/storage/instances/jhhh_1787610544/.venv/bin/python)
+
+[2026-08-24 22:57:09] 🧰 Preparing isolated Python environment...
+[2026-08-24 22:57:09] 📦 Installing requirements.txt before startup...
+Requirement already satisfied: pyTelegramBotAPI==4.22.0 in ./.venv/lib/python3.12/site-packages (from -r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (4.22.0)
+Requirement already satisfied: requests in ./.venv/lib/python3.12/site-packages (from pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.34.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.5.1)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.19)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2026.7.22)
+[2026-08-24 22:57:09] ✅ Python requirements installed in isolated environment.
+
+[2026-08-24 22:57:09] 🚀 Instance STARTED Successfully (/home/ubuntu/ne-host/storage/instances/jhhh_1787610544/.venv/bin/python)
+
+[2026-08-24 22:57:09] 🛑 Instance STOPPED
+
+[2026-08-24 22:57:10] 🛑 Instance STOPPED
+
+[2026-08-24 22:57:10] 🧰 Preparing isolated Python environment...
+[2026-08-24 22:57:10] 📦 Installing requirements.txt before startup...
+Requirement already satisfied: pyTelegramBotAPI==4.22.0 in ./.venv/lib/python3.12/site-packages (from -r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (4.22.0)
+Requirement already satisfied: requests in ./.venv/lib/python3.12/site-packages (from pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.34.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.5.1)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.19)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2026.7.22)
+[2026-08-24 22:57:10] ✅ Python requirements installed in isolated environment.
+
+[2026-08-24 22:57:10] 🚀 Instance STARTED Successfully (/home/ubuntu/ne-host/storage/instances/jhhh_1787610544/.venv/bin/python)
+
+[2026-08-24 23:06:47] 🧰 Preparing isolated Python environment...
+[2026-08-24 23:06:47] 📦 Installing requirements.txt before startup...
+Requirement already satisfied: pyTelegramBotAPI==4.22.0 in ./.venv/lib/python3.12/site-packages (from -r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (4.22.0)
+Requirement already satisfied: requests in ./.venv/lib/python3.12/site-packages (from pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.34.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.5.1)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (3.19)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./.venv/lib/python3.12/site-packages (from requests->pyTelegramBotAPI==4.22.0->-r /home/ubuntu/ne-host/storage/instances/jhhh_1787610544/requirements.txt (line 1)) (2026.7.22)
+[2026-08-24 23:06:47] ✅ Python requirements installed in isolated environment.
+
+[2026-08-24 23:06:47] 🚀 Instance STARTED Successfully (/home/ubuntu/ne-host/storage/instances/jhhh_1787610544/.venv/bin/python)

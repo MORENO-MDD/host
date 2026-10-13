@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <title>13X1 HOST | Secure Access</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+        :root { --bg:#07101f; --panel:#0d1c32; --panel-soft:rgba(18,37,65,.72); --accent:#4f8cff; --accent-2:#7c5cff; --success:#39d98a; --text:#f5f8ff; --muted:#91a1bd; --border:rgba(156,190,255,.16); }
+        * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+        body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; background:var(--bg); overflow-x:hidden; }
+        .page-bg { position:fixed; inset:0; overflow:hidden; pointer-events:none; background:radial-gradient(circle at 8% 5%,rgba(79,140,255,.22),transparent 33%),radial-gradient(circle at 92% 90%,rgba(124,92,255,.18),transparent 32%); }
+        .page-bg:before, .page-bg:after { content:''; position:absolute; border:1px solid rgba(120,164,255,.12); border-radius:50%; }
+        .page-bg:before { width:560px; height:560px; left:-290px; top:-230px; box-shadow:0 0 0 28px rgba(120,164,255,.025),0 0 0 62px rgba(120,164,255,.018); }
+        .page-bg:after { width:480px; height:480px; right:-245px; bottom:-210px; box-shadow:0 0 0 25px rgba(124,92,255,.03),0 0 0 56px rgba(124,92,255,.018); }
+        .login-shell { position:relative; z-index:1; width:min(1040px,92%); min-height:620px; display:grid; grid-template-columns:1.05fr .95fr; overflow:hidden; border:1px solid var(--border); border-radius:28px; background:rgba(9,22,40,.78); box-shadow:0 35px 100px rgba(0,0,0,.4); backdrop-filter:blur(24px); }
+        .brand-panel { position:relative; display:flex; flex-direction:column; justify-content:space-between; padding:43px; background:linear-gradient(145deg,rgba(79,140,255,.16),rgba(8,22,40,.3) 58%,rgba(124,92,255,.13)); border-right:1px solid var(--border); overflow:hidden; }
+        .brand-panel:after { content:''; position:absolute; width:340px; height:340px; right:-150px; bottom:-155px; border-radius:50%; border:1px solid rgba(130,171,255,.18); box-shadow:0 0 0 22px rgba(130,171,255,.035),0 0 0 48px rgba(130,171,255,.025); }
+        .brand { display:flex; align-items:center; gap:13px; font-weight:800; letter-spacing:.2px; }
+        .brand-icon { width:46px; height:46px; display:grid; place-items:center; color:#fff; border-radius:14px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:0 13px 28px rgba(79,140,255,.28); font-size:20px; }
+        .brand small { display:block; margin-top:4px; color:#87a0c4; font-size:9px; letter-spacing:1.7px; font-family:'JetBrains Mono'; }
+        .brand-copy { position:relative; z-index:1; max-width:460px; margin-top:60px; }
+        .eyebrow { color:#7da9ff; font-size:10px; font-weight:800; letter-spacing:1.9px; text-transform:uppercase; }
+        .brand-copy h1 { margin:13px 0 13px; font-size:clamp(30px,4vw,48px); line-height:1.1; letter-spacing:-1.8px; }
+        .brand-copy h1 span { color:#79a7ff; }
+        .brand-copy p { margin:0; color:#aab9d0; font-size:13px; line-height:1.8; max-width:410px; }
+        .benefits { position:relative; z-index:1; display:grid; gap:10px; margin-top:35px; }
+        .benefit { display:flex; align-items:center; gap:12px; color:#c1cee2; font-size:11px; }
+        .benefit i { width:29px; height:29px; display:grid; place-items:center; border-radius:9px; color:#88afff; background:rgba(79,140,255,.13); }
+        .brand-foot { position:relative; z-index:1; color:#637895; font-size:10px; font-family:'JetBrains Mono'; }
+        .form-panel { display:flex; align-items:center; padding:43px clamp(28px,5vw,66px); background:rgba(5,15,29,.36); }
+        .form-wrap { width:100%; max-width:360px; margin:auto; }
+        .form-head { margin-bottom:28px; }
+        .form-head h2 { margin:10px 0 8px; font-size:28px; letter-spacing:-1px; }
+        .form-head p { margin:0; color:var(--muted); font-size:12px; line-height:1.6; }
+        .secure-pill { display:inline-flex; align-items:center; gap:7px; padding:7px 10px; border:1px solid rgba(57,217,138,.18); border-radius:20px; color:#8fe7b6; background:rgba(57,217,138,.07); font-size:9px; font-weight:800; letter-spacing:.5px; }
+        .secure-dot { width:6px; height:6px; border-radius:50%; background:var(--success); box-shadow:0 0 10px var(--success); }
+        .input-group { margin-bottom:16px; }
+        .input-group label { display:block; margin:0 0 8px 2px; color:#aebed7; font-size:10px; font-weight:800; letter-spacing:1.1px; text-transform:uppercase; }
+        .input-box { position:relative; }
+        .input-box input { width:100%; padding:15px 45px 15px 44px; color:#fff; background:rgba(255,255,255,.045); border:1px solid var(--border); border-radius:13px; outline:none; font-size:13px; transition:.2s; }
+        .input-box input::placeholder { color:#607490; }
+        .input-box input:focus { border-color:var(--accent); box-shadow:0 0 0 4px rgba(79,140,255,.12); background:rgba(79,140,255,.055); }
+        .input-icon { position:absolute; left:16px; top:50%; transform:translateY(-50%); color:#6f87a9; font-size:15px; pointer-events:none; transition:.2s; }
+        .input-box input:focus + .input-icon { color:#7da9ff; }
+        .pass-toggle { position:absolute; right:14px; top:50%; transform:translateY(-50%); padding:6px; color:#6f87a9; cursor:pointer; transition:.2s; }
+        .pass-toggle:hover { color:#fff; }
+        .form-options { display:flex; justify-content:space-between; align-items:center; margin:3px 1px 21px; color:#788da9; font-size:10px; }
+        .form-options label { display:flex; align-items:center; gap:7px; cursor:pointer; }
+        .form-options input { accent-color:var(--accent); }
+        .form-options a { color:#86adff; text-decoration:none; font-weight:700; }
+        .btn-submit { width:100%; display:flex; align-items:center; justify-content:center; gap:10px; padding:15px; border:0; border-radius:13px; color:#fff; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:0 12px 25px rgba(79,140,255,.22); font-size:13px; font-weight:800; cursor:pointer; transition:.2s; }
+        .btn-submit:hover { transform:translateY(-2px); filter:brightness(1.08); box-shadow:0 16px 30px rgba(79,140,255,.3); }
+        .btn-submit:disabled { opacity:.6; cursor:not-allowed; transform:none; }
+        .signup-link { margin-top:24px; text-align:center; color:#788da9; font-size:11px; }
+        .signup-link a { color:#86adff; text-decoration:none; font-weight:800; }
+        .divider { display:flex; align-items:center; gap:10px; margin:25px 0 16px; color:#506683; font-size:9px; text-transform:uppercase; letter-spacing:1.2px; }
+        .divider:before, .divider:after { content:''; height:1px; flex:1; background:var(--border); }
+        .runtime-note { display:flex; align-items:center; justify-content:center; gap:8px; color:#6f85a4; font-size:10px; }
+        .runtime-note i { color:#7da9ff; }
+        .swal2-popup { border:1px solid rgba(156,190,255,.18) !important; border-radius:18px !important; background:#12213a !important; box-shadow:0 25px 80px rgba(0,0,0,.5) !important; }
+        @media (max-width:780px) {
+            body { align-items:flex-start; padding:18px 0; overflow-y:auto; }
+            .login-shell { width:min(470px,94%); min-height:auto; display:block; border-radius:22px; }
+            .brand-panel { min-height:300px; padding:27px 24px; border-right:0; border-bottom:1px solid var(--border); }
+            .brand-copy { margin-top:42px; }
+            .brand-copy h1 { font-size:31px; }
+            .benefits { display:none; }
+            .brand-foot { margin-top:30px; }
+            .form-panel { padding:31px 24px 35px; }
+        }
+        @media (max-width:380px) { .brand-panel { padding:23px 19px; } .form-panel { padding:27px 19px 30px; } .form-options { font-size:9px; } }
+    
+body{background-image:radial-gradient(circle at 8% 0%,rgba(79,140,255,.18),transparent 32%),radial-gradient(circle at 100% 100%,rgba(124,92,255,.12),transparent 30%)}.form-panel,.intro{box-shadow:0 25px 80px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.04)}.submit,.secure-pill{transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}.submit:hover{transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 14px 32px rgba(79,140,255,.22)}
+</style>
+</head>
+<body>
+    <div class="page-bg"></div>
+    <main class="login-shell animate__animated animate__fadeInUp">
+        <section class="brand-panel">
+            <div class="brand"><div class="brand-icon"><i class="fas fa-bolt"></i></div><div>13X1 HOST<small>13X1 HOSTING PANEL</small></div></div>
+            <div class="brand-copy"><div class="eyebrow">Secure workspace</div><h1>Build faster.<br><span>Deploy smarter.</span></h1><p>Everything you need to manage your Python servers, files and live processes from one professional control center.</p><div class="benefits"><div class="benefit"><i class="fab fa-python"></i><span>Python-first hosting environment</span></div><div class="benefit"><i class="fas fa-terminal"></i><span>Live console and real-time server control</span></div><div class="benefit"><i class="fas fa-shield-halved"></i><span>Protected access to your workspace</span></div></div></div>
+            <div class="brand-foot">13X1-HOST / SECURE ACCESS / 2026</div>
+        </section>
+        <section class="form-panel">
+            <div class="form-wrap">
+                <div style="margin-bottom:16px"><a href="/" style="display:inline-flex;align-items:center;gap:7px;color:#86adff;text-decoration:none;font-size:10px;font-weight:800"><i class="fas fa-arrow-left"></i> Back to home</a></div><div class="form-head"><span class="secure-pill"><span class="secure-dot"></span> SYSTEM OPERATIONAL</span><h2>Welcome back</h2><p>Sign in to continue to your hosting dashboard.</p></div>
+                <form id="authForm" onsubmit="handleAuth(event)">
+                    <div class="input-group"><label for="emailInput">Email address</label><div class="input-box"><input id="emailInput" type="email" name="email" placeholder="you@example.com" required autocomplete="email"><i class="fas fa-envelope input-icon"></i></div></div>
+                    <div class="input-group"><label for="passInput">Password</label><div class="input-box"><input id="passInput" type="password" name="password" placeholder="Enter your password" required autocomplete="current-password"><i class="fas fa-lock input-icon"></i><i class="fas fa-eye-slash pass-toggle" onclick="togglePassword()"></i></div></div>
+                    <div class="form-options"><label><input type="checkbox"> Remember me</label><span style="color:#6f83a1;font-size:10px">Accounts are created by admin</span></div>
+                    <button type="submit" class="btn-submit" id="submitBtn"><span>Sign in securely</span><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="divider">13X1 HOSTING</div><div class="runtime-note"><i class="fab fa-python"></i> Your servers. Your code. One control center.</div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function togglePassword() {
+            const input = document.getElementById('passInput');
+            const icon = document.querySelector('.pass-toggle');
+            if (input.type === 'password') { input.type = 'text'; icon.classList.replace('fa-eye-slash', 'fa-eye'); }
+            else { input.type = 'password'; icon.classList.replace('fa-eye', 'fa-eye-slash'); }
+        }
+        async function handleAuth(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn'); const btnText = btn.querySelector('span'); const btnIcon = btn.querySelector('i');
+            btn.disabled = true; btnText.innerText = 'Verifying access...'; btnIcon.className = 'fas fa-circle-notch fa-spin';
+            try {
+                const formData = new FormData(e.target);
+                const response = await fetch('/login', { method:'POST', body:formData });
+                const data = await response.json();
+                if (response.status === 200) {
+                    Swal.fire({icon:'success', title:'Access verified', text:'Opening your dashboard...', timer:1600, showConfirmButton:false});
+                    setTimeout(() => window.location.href = data.url, 1500);
+                } else if (response.status === 403) {
+                    Swal.fire({icon:'error', title:'Access restricted', text:data.msg || 'This account has been suspended.', showCancelButton:true, confirmButtonText:'Appeal access', cancelButtonText:'Close'}).then(result => { if(result.isConfirmed) window.open('https://t.me/MT_0G','_blank'); });
+                    reset();
+                } else {
+                    Swal.fire({icon:'warning', title:'Sign in failed', text:data.msg || 'Invalid credentials provided.'}); reset();
+                }
+            } catch (err) { Swal.fire({icon:'error', title:'Connection error', text:'Unable to reach the Python server. Please try again.'}); reset(); }
+            function reset() { btn.disabled=false; btnText.innerText='Sign in securely'; btnIcon.className='fas fa-arrow-right'; }
+        }
+    </script>
+</body>
+</html>
